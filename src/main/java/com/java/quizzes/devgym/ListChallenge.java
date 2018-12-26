@@ -5,6 +5,7 @@
  */
 package com.java.quizzes.devgym;
 
+import java.util.ArrayList;
 /**
  *
  * @author Skywalker
@@ -28,5 +29,20 @@ public class ListChallenge {
         }
         
         System.out.println(soldiers);
+        List<String> s = copyListOfStrings(soldiers);
+        
+        for(String str : s) {
+        	System.out.println(str);
+        }
     }  
+    
+    public static List<String> copyListOfStrings(List<String> source){
+        List<String> copiedList = new ArrayList<String>();
+        
+        for(String str : source) {
+        	copiedList.add(str);
+        }
+        
+        return copiedList;
+    }
 }
